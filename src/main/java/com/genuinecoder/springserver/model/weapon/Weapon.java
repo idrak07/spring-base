@@ -18,13 +18,13 @@ public class Weapon implements Serializable {
 
     private String buttNo;
 
-    private Long assignedTo;
+    private String assignedTo;
 
     private boolean isAssigned = Boolean.FALSE;
 
     public Weapon() {}
 
-    public Weapon(Long id, String weaponType, String weaponName, String buttNo, Long assignedTo, boolean isAssigned) {
+    public Weapon(Long id, String weaponType, String weaponName, String buttNo, String assignedTo, boolean isAssigned) {
         this.id = id;
         this.weaponType = weaponType;
         this.weaponName = weaponName;
@@ -72,11 +72,11 @@ public class Weapon implements Serializable {
         this.buttNo = buttNo;
     }
 
-    public Long getAssignedTo() {
+    public String getAssignedTo() {
         return assignedTo;
     }
 
-    public void setAssignedTo(Long assignedTo) {
+    public void setAssignedTo(String assignedTo) {
         this.assignedTo = assignedTo;
     }
 
