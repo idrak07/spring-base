@@ -1,12 +1,16 @@
 package com.genuinecoder.springserver.controller;
 
+import com.genuinecoder.springserver.model.weapon.IssuedWeapons;
 import com.genuinecoder.springserver.model.weapon.Weapon;
 import com.genuinecoder.springserver.model.weapon.WeaponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class WeaponController {
@@ -45,5 +49,10 @@ public class WeaponController {
     @PostMapping("/weapon/report")
     public WeaponStatus getReport() {
         return weaponService.getReport();
+    }
+
+    @GetMapping("/weapon/issues")
+    public List<IssuedWeapons> getIssuedWeapon() {
+        return weaponService.getIssuedWeapon();
     }
 }

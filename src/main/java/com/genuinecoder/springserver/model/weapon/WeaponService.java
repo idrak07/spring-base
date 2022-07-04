@@ -74,4 +74,8 @@ public class WeaponService {
         weaponStatus.setAssigned(weaponRepository.getassigned());
         return weaponStatus;
     }
+
+    public List<IssuedWeapons> getIssuedWeapon() {
+        return issuedWeaponsRepository.findAll();
+    }
 }

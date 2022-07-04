@@ -8,4 +8,6 @@ import java.util.List;
 @Repository
 public interface IssuedWeaponsRepository extends CrudRepository<IssuedWeapons, Long> {
     List<IssuedWeapons> findByWeaponId(Long weaponId);
+
+    List<IssuedWeapons> findAll();
 }
